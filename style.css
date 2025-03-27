@@ -1379,3 +1379,108 @@ section {
 .fa-check-circle, .fa-exclamation-circle {
     margin-right: 8px;
 }
+
+/* General Mobile Optimizations (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+        max-width: 100%; /* Force full width */
+    }
+
+    section {
+        padding: 50px 12px; /* Tighter spacing */
+    }
+
+    /* Prevent awkward text wrapping */
+    .section-title,
+    .section-subtitle,
+    .salon-description h3,
+    .salon-description p,
+    .contact-info h3,
+    .contact-form h3 {
+        word-break: normal;
+        hyphens: auto; /* Better word breaks */
+    }
+}
+
+/* Small Devices (480px and below) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    /* Slightly reduce font sizes for readability */
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Optimize form inputs and buttons */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .cta-button,
+    .form-submit-button {
+        padding: 10px 18px;
+        font-size: 0.95rem;
+    }
+
+    /* Adjust iframe heights (booking widget/maps) */
+    .responsive-iframe-container iframe,
+    .map-container iframe {
+        height: 350px;
+    }
+}
+
+/* Extra Small Devices (320px and below) */
+@media (max-width: 320px) {
+    .container {
+        padding: 0 8px; /* Minimal padding */
+    }
+
+    section {
+        padding: 30px 8px;
+    }
+
+    /* Compact font sizes */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Tiny form adjustments */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 8px 10px;
+    }
+
+    /* Compact iframes */
+    .responsive-iframe-container iframe {
+        height: 300px;
+    }
+
+    .map-container iframe {
+        height: 280px;
+    }
+}
+@media (max-width: 480px) {
+    body, html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
