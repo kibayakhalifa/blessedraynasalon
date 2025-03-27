@@ -248,7 +248,7 @@ section {
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .homepage-content {
@@ -740,42 +740,45 @@ section {
 /* Book an Appointment Section */
 .book {
     background-color: var(--light-color);
+    padding: 20px 0;
 }
 
 .book-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .opening-hours {
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: var(--soft-shadow);
-    align-self: start;
 }
 
 .opening-hours h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .hours-list {
     list-style: none;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 .hours-list li {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     justify-content: space-between;
+    font-size: 0.9rem;
 }
 
 .day {
@@ -789,16 +792,17 @@ section {
 
 .contact-info-box {
     background-color: rgba(232, 62, 140, 0.05);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 0.9rem;
 }
 
 .contact-info-box p {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .contact-info-box a {
@@ -813,15 +817,15 @@ section {
 
 .booking-widget {
     background-color: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: var(--soft-shadow);
 }
 
 .booking-widget h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -830,15 +834,42 @@ section {
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .responsive-iframe-container iframe {
     width: 100%;
-    height: 600px;
+    height: 500px;
     border: none;
+    min-height: 400px;
 }
 
+/* Media Query for very small devices */
+@media (max-width: 360px) {
+    .book-content {
+        padding: 0 10px;
+        gap: 15px;
+    }
+    
+    .opening-hours,
+    .booking-widget {
+        padding: 15px;
+    }
+    
+    .opening-hours h3,
+    .booking-widget h4 {
+        font-size: 1.2rem;
+    }
+    
+    .hours-list li,
+    .contact-info-box {
+        font-size: 0.85rem;
+    }
+    
+    .responsive-iframe-container iframe {
+        height: 450px;
+    }
+}
 /* Contact Section */
 .contact {
     background-color: var(--dark-color);
